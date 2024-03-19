@@ -8,6 +8,13 @@
       "when": 1710818837899,
       "tag": "0000_whole_shape",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1710821755264,
+      "tag": "0001_wooden_hulk",
+      "breakpoints": true
     }
   ]
 }
