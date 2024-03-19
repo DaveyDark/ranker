@@ -13,6 +13,7 @@ export const createUser = async (user: {
   username: string;
   name: string;
   email: string;
+  image_url?: string;
 }) => {
   const insertResult = await db.insert(User).values(user).returning();
   console.log("Results", insertResult);
@@ -25,6 +26,7 @@ export const updateUser = async (
     username: string;
     name: string;
     email: string;
+    image_url?: string;
   },
   path: string,
 ) => {
