@@ -1,9 +1,9 @@
 import {
   pgTable,
-  serial,
   text,
   timestamp,
   uniqueIndex,
+  serial,
 } from "drizzle-orm/pg-core";
 
 export const User = pgTable(
