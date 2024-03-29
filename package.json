@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.9",
+    "@types/canvas-confetti": "^1.6.4",
     "@vercel/postgres": "^0.7.2",
     "canvas-confetti": "^1.9.2",
     "dotenv": "^16.4.5",
