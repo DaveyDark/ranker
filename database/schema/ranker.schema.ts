@@ -8,6 +8,14 @@ import {
 } from "drizzle-orm/pg-core";
 import { User } from "./user.schema";
 
+export interface IRanker {
+  id: number;
+  user_id: number;
+  name: string;
+  options: string[];
+  createdAt: Date;
+}
+
 export const Ranker = pgTable(
   "rankers",
   {
