@@ -1,13 +1,25 @@
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import "@/app/globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/shared/navbar/Navbar";
-import React from "react";
 
-const layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <main className="background-light850_dark100 relative">
-      <Navbar />
-      <div>{children}</div>
-    </main>
-  );
+const montserrat = Montserrat({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Ranker",
+  description: "",
 };
 
-export default layout;
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+    </>
+  );
+}

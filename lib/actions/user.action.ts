@@ -5,7 +5,6 @@ import { revalidatePath } from "next/cache";
 
 export const getUsers = async () => {
   const selectResult = await db.select().from(User);
-  console.log("Results", selectResult);
 };
 
 export const createUser = async (user: {
@@ -16,7 +15,6 @@ export const createUser = async (user: {
   image_url?: string;
 }) => {
   const insertResult = await db.insert(User).values(user).returning();
-  console.log("Results", insertResult);
   return insertResult;
 };
 
@@ -35,7 +33,6 @@ export const updateUser = async (
     .set(user)
     .where(eq(User.clerkId, user.clerkId))
     .returning();
-  console.log("Results", updateResult);
 
   revalidatePath(path);
   return updateResult;
