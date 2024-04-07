@@ -23,7 +23,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({ title, icon, onSubmit }) => {
 
     confetti({
       particleCount: 100,
-      spread: 120,
+      spread: 80,
       origin: {
         x: buttonX / window.innerWidth,
         y: buttonY / window.innerHeight,

@@ -82,6 +82,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "spin-once": "spin 0.5s linear",
+        "ping-once": "ping 0.5s linear",
       },
       ripple: (theme: any) => ({
         colors: theme("colors"),

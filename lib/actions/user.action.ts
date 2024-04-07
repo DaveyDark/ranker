@@ -23,6 +23,22 @@ export const getUser = async (id: number): Promise<IUser | undefined> => {
   }
 };
 
+export const getUserByClerkId = async (
+  clerkId: string,
+): Promise<IUser | undefined> => {
+  try {
+    const selectResult = await db
+      .select()
+      .from(User)
+      .where(eq(User.clerkId, clerkId))
+      .limit(1);
+    if (selectResult.length == 0) throw new Error(`User not found`);
+    return selectResult[0];
+  } catch (error) {
+    console.error(`Error getting user with clerkId ${clerkId}: ${error}`);
+  }
+};
+
 export const createUser = async (user: {
   clerkId: string;
   username: string;

@@ -1,13 +1,19 @@
 import { Button } from "@/components/ui/button";
+import { auth } from "@clerk/nextjs";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Home() {
+  const { userId } = auth();
+  if (userId) {
+    redirect("/home");
+  }
   return (
     <main className="bg-pattern min-h-screen">
       <nav className="absolute top-10 left-10">
         <Link
           className="text-3xl font-bold bg-white rounded-xl p-4 lg:text-5xl"
-          href="/sign-up"
+          href="/"
         >
           RANKER.GG
         </Link>
@@ -22,7 +28,7 @@ export default function Home() {
             Welcome to the ranking revolution! Sign up or log in to be a part of
             the movement!
           </p>
-          <Link href="/">
+          <Link href="/home">
             <Button
               className="bg-white text-black w-full text-2xl font-bold py-8 rounded-2xl
               hover:bg-white hover:scale-[102%] transition-all

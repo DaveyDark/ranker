@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex w-full justify-between align-center p-8 max-w-[90rem] mx-auto">
+    <nav className="flex w-full justify-between align-center p-8 max-w-[90rem] mx-auto absolute left-0 right-0">
       <Link className="text-3xl font-bold text-white p-4" href="/sign-up">
         RANKER.GG
       </Link>

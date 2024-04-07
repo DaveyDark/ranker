@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.9",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
     "@types/canvas-confetti": "^1.6.4",
     "@types/feather-icons": "^4.29.4",
     "@vercel/postgres": "^0.7.2",

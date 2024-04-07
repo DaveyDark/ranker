@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "@/app/globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/shared/navbar/Navbar";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ranker",
@@ -19,7 +15,7 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="min-h-screen pt-28 overflow-hidden">{children}</main>
     </>
   );
 }
