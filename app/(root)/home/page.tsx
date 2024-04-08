@@ -8,7 +8,7 @@ import React from "react";
 
 const Page = async () => {
   const { userId } = auth();
-  if (!userId) return redirect("/sign-in");
+  if (!userId) redirect("/sign-in");
   const ranker = await getLatestRanker(userId);
 
   return (

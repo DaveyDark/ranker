@@ -20,7 +20,8 @@ const Ranker = (props: {
         values={options}
         onReorder={setOptions}
         as="ul"
-        className="my-5 text-white bg-secondary px-8 py-4 rounded-3xl flex flex-col gap-1"
+        layoutScroll
+        className="my-5 text-white bg-secondary px-8 py-4 rounded-3xl flex flex-col gap-1 max-h-[50vh] overflow-y-scroll"
       >
         {options.map((opt, i) => (
           <Reorder.Item value={opt} key={opt}>

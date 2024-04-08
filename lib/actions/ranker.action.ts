@@ -40,11 +40,16 @@ export const getRanker = async (id: number): Promise<IRanker | undefined> => {
       .where(eq(Ranker.id, id))
       .limit(1);
 
-    if (ranker.length === 0) throw new Error("Ranker not found");
+    if (ranker.length === 0) {
+      console.error(`Ranker not found`);
+      throw new Error("Ranker not found");
+    }
 
     return ranker[0];
   } catch (error) {
-    console.error(`Error getting ranker with id ${id}: ${error}`);
+    console.error(
+      `Error getting ranker with id ${id}: ${JSON.stringify(error)}`,
+    );
     return undefined;
   }
 };

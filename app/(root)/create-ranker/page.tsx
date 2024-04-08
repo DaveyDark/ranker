@@ -16,7 +16,7 @@ const Page = async () => {
   const ranker = await getRandomRankerTemplate();
 
   if (!ranker || !user) {
-    return redirect("/");
+    redirect("/");
   }
 
   async function callback(): Promise<IRankerTemplate> {
@@ -44,7 +44,7 @@ const Page = async () => {
 
   return (
     <>
-      <main className="w-full min-h-screen flex flex-col lg:flex-row lg:justify-center lg:min-h-[80vh] lg:gap-24 justify-around items-center">
+      <main className="w-full px-4 min-h-screen flex flex-col lg:flex-row lg:justify-center lg:min-h-[80vh] lg:gap-24 justify-around items-center">
         <CreateRanker
           userName={user.name}
           userImg={user.image_url}

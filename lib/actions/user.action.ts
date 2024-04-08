@@ -18,8 +18,8 @@ export const getUser = async (id: number): Promise<IUser | undefined> => {
     if (selectResult.length == 0) throw new Error(`User not found`);
 
     return selectResult[0];
-  } catch (error) {
-    console.error(`Error getting user with id ${id}: ${error}`);
+  } catch (error: any) {
+    console.error(`Error getting user with id ${id}: ${error.toString()}`);
   }
 };
 
@@ -34,8 +34,11 @@ export const getUserByClerkId = async (
       .limit(1);
     if (selectResult.length == 0) throw new Error(`User not found`);
     return selectResult[0];
-  } catch (error) {
-    console.error(`Error getting user with clerkId ${clerkId}: ${error}`);
+  } catch (error: any) {
+    console.log(JSON.stringify(error));
+    console.error(
+      `Error getting user with clerkId ${clerkId}: ${error.toString()}`,
+    );
   }
 };
 

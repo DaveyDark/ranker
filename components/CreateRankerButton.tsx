@@ -23,7 +23,7 @@ const CreateRankerButton: FC<CreateRankerProps> = () => {
       <div className="flex w-full items-center justify-between gap-4">
         <div className="font-bold text-2xl">Create a Ranker!</div>
         <div
-          className="w-20 h-20 bg-blue-500 rounded-full hover:cursor-pointer grid place-items-center animate-bounce"
+          className="w-16 h-16 bg-blue-500 rounded-full aspect-square hover:cursor-pointer grid place-items-center animate-bounce"
           onClick={() => {
             iconRef.current!.classList.remove("animate-bounce");
             iconRef.current!.classList.add("animate-ping-once");
@@ -37,8 +37,8 @@ const CreateRankerButton: FC<CreateRankerProps> = () => {
         >
           <svg
             className="text-white"
-            width={56}
-            height={56}
+            width={48}
+            height={48}
             data-feather="chevron-right"
           />
         </div>

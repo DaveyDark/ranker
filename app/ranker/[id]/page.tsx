@@ -7,23 +7,30 @@ import Ranker from "@/components/Ranker";
 import { getUser } from "@/lib/actions/user.action";
 import Image from "next/image";
 import { addRanking } from "@/lib/actions/ranking.action";
+import { auth } from "@clerk/nextjs";
 
 const Page = async ({ params }: { params: { id: number } }) => {
+  const { userId } = auth();
   const ranker = await getRanker(params.id);
 
   if (!ranker) {
-    return redirect("/");
+    console.log("Ranker not found");
+    redirect("/");
   }
 
   const user = await getUser(ranker.user_id);
   if (!user) {
-    return redirect("/");
+    console.log("User not found");
+    redirect("/");
+  }
+  if (user.clerkId == userId) {
+    redirect(`/rankers/${params.id}/summary`);
   }
 
   async function handler(order: string[]) {
     "use server";
     await addRanking({ id: params.id, ranks: order });
-    return redirect("/");
+    redirect("/");
   }
 
   return (
