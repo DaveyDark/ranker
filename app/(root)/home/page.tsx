@@ -13,14 +13,12 @@ const Page = async () => {
 
   return (
     <div
-      // lg:flex-row-reverse lg:w-full lg:my-24
-      className="flex flex-col 
-      justify-center gap-32 h-full"
+      className="flex flex-col h-full items-center
+      justify-between gap-12"
     >
       <CreateRankerButton />
       <div
-        // lg:static lg:m-0 lg:rounded-b-[5rem]
-        className="bg-secondary absolute bottom-0 left-0 right-0 mx-auto max-w-md
+        className="bg-secondary mx-auto max-w-md
         flex flex-col justify-around
         p-10 pb-4 rounded-t-[5rem] gap-4"
       >

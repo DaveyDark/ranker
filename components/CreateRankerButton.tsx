@@ -14,7 +14,7 @@ const CreateRankerButton: FC<CreateRankerProps> = () => {
   });
   return (
     <div
-      className="bg-white rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-[4rem] 
+      className="bg-white rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-[4rem] my-auto
         aspect-square p-12 relative shadow-primary shadow-diagonal max-w-sm flex flex-col justify-between"
     >
       <h1 className="text-3xl font-bold leading-7">

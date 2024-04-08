@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-28 overflow-hidden">{children}</main>
+      <main className="h-screen pt-28">{children}</main>
     </>
   );
 }

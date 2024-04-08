@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col items-center justify-between gap-12">
+    <div className="flex flex-col items-center justify-between gap-12 h-full">
       <TabBar />
       {children}
     </div>

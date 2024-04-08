@@ -12,13 +12,11 @@ const Page = async ({ params }: { params: { id: number } }) => {
   const ranker = await getRanker(params.id);
 
   if (!ranker) {
-    // TODO: Ranker not found
     return redirect("/");
   }
 
   const user = await getUser(ranker.user_id);
   if (!user) {
-    // TODO: User not found
     return redirect("/");
   }
 
