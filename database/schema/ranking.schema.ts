@@ -8,7 +8,7 @@ import {
 } from "drizzle-orm/pg-core";
 import { Ranker } from "./ranker.schema";
 
-interface IRanking {
+export interface IRanking {
   id: number;
   ranker_id: number;
   ranks: string[];

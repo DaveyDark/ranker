@@ -9,6 +9,7 @@ interface AvgListMainProps {
   onDel?: (i: number) => void;
   index?: number;
   disabled?: boolean;
+  invert?: boolean;
 }
 
 const AvgListMain: FC<AvgListMainProps> = ({
@@ -18,18 +19,20 @@ const AvgListMain: FC<AvgListMainProps> = ({
   onDel,
   index,
   disabled,
+  invert,
 }) => {
   useEffect(() => feather.replace(), []);
   return (
     <>
       <div
         className={`m-2 text-white px-2 rounded-3xl shadow-xl min-w-60 max-w-60 flex-shrink-0
-        min-h-[5rem] h-fit text-wrap relative flex flex-col justify-center items-center py-2 
+        min-h-[5rem] h-fit text-wrap relative flex flex-col justify-center items-center py-2
         ${
           disabled
-            ? "bg-secondary"
-            : "cursor-pointer hover:scale-[102%] transition-transform bg-secondary-foreground"
-        }`}
+            ? ""
+            : "cursor-pointer hover:scale-[102%] transition-transform"
+        }
+          ${invert ? "bg-secondary" : "bg-secondary-foreground"}`}
       >
         <span
           className="absolute -top-1.5 -left-1.5 bg-blue-500 text-white rounded-full 

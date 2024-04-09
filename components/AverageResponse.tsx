@@ -28,7 +28,13 @@ const AverageResponse = ({ responses, ranks }: Props) => {
         max-h-[50vh] overflow-y-scroll"
       >
         {ranks.map((rank, index) => (
-          <ListItem key={index} title={rank} count={index + 1} disabled />
+          <ListItem
+            key={index}
+            title={rank}
+            count={index + 1}
+            disabled
+            invert
+          />
         ))}
       </div>
     </div>

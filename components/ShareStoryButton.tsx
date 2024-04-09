@@ -8,9 +8,17 @@ interface Props {
   shareTitle: string;
   shareText: string;
   rankerId: number;
+  targetId: string;
+  listId: string;
 }
 
-const ShareStoryButton = ({ shareTitle, shareText, rankerId }: Props) => {
+const ShareStoryButton = ({
+  shareTitle,
+  shareText,
+  targetId,
+  listId,
+  rankerId,
+}: Props) => {
   const toaster = useToast();
 
   const handleShare = async (blob: Blob) => {
@@ -46,20 +54,18 @@ const ShareStoryButton = ({ shareTitle, shareText, rankerId }: Props) => {
     <div
       className="flex gap-4 items-center hover:cursor-pointer"
       onClick={() => {
-        document.getElementById("canvasTarget2")!.style.maxHeight = "none";
-        document.getElementById("canvasTarget2")!.style.overflow = "hidden";
+        document.getElementById(listId)!.style.maxHeight = "none";
+        document.getElementById(listId)!.style.overflow = "hidden";
         domtoimage
-          .toBlob(document.getElementById("canvasTarget")!, {
+          .toBlob(document.getElementById(targetId)!, {
             style: {
               borderRadius: "0px",
             },
           })
           .then((blob: Blob) => {
             handleShare(blob).then(() => {
-              document.getElementById("canvasTarget2")!.style.maxHeight =
-                "50vh";
-              document.getElementById("canvasTarget2")!.style.overflowY =
-                "scroll";
+              document.getElementById(listId)!.style.maxHeight = "50vh";
+              document.getElementById(listId)!.style.overflowY = "scroll";
             });
           });
       }}
