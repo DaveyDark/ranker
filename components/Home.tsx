@@ -17,12 +17,12 @@ justify-between gap-6 ${show ? "" : "max-lg:hidden"}`}
     >
       <CreateRankerButton />
       <div
-        className="bg-secondary mx-auto max-w-md flex flex-col justify-around
+        className="bg-secondary w-screen sm:w-[28rem] flex flex-col justify-around
           p-10 pb-4 rounded-t-[5rem] gap-4 lg:rounded-b-[5rem] lg:mb-4 lg:pb-10"
       >
         <div
           className="bg-white rounded-t-[5rem] rounded-b-3xl lg:rounded-b-[5rem]
-            p-3 flex flex-col items-center gap-2 px-24"
+            p-3 flex flex-col items-center gap-2 py-2 px-4"
         >
           <p className={`font-semibold text-lg`}>Copy your link!</p>
           <LinkButton
@@ -32,7 +32,7 @@ justify-between gap-6 ${show ? "" : "max-lg:hidden"}`}
         </div>
         <div
           className="bg-white rounded-3xl p-3 flex flex-col lg:rounded-[5rem]
-            items-center gap-2 px-24"
+            items-center gap-2 py-2 px-4"
         >
           <p className="font-semibold text-lg">How to Share?</p>
           <LearnButton />

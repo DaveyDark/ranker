@@ -27,7 +27,7 @@ const CopyLearnMenu: FC<CopyLearnMenuProps> = ({}) => {
 
       return (
         <main className=''>
-          <div className="bg-[#253143] py-4 px-8 rounded-t-5xl rounded-b-2xl sm:w-80 w-screen">
+          <div className="bg-[#253143] py-4 px-8 rounded-t-5xl rounded-b-2xl sm:w-80 w-full">
             <div className="bg-white flex-col flex justify-center items-center mb-4 rounded-t-4xl rounded-b-2xl py-2 px-8 m-4">
               <span className="m-2 text-md sm:text-sm">Copy your link!</span>
               <div className="bg-blue-500 px-4 py-2 my-2 rounded-2xl hover:cursor-pointer">Copy</div>
@@ -37,7 +37,6 @@ const CopyLearnMenu: FC<CopyLearnMenuProps> = ({}) => {
               <div className="bg-blue-500 px-4 py-2 my-2 rounded-2xl hover:cursor-pointer" onClick={togglePopup}>
                 Learn
               </div>
-
 
               {isOpen && (
                 <div className="absolute top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center ">

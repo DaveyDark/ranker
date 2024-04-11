@@ -14,14 +14,14 @@ const CreateRankerButton: FC<CreateRankerProps> = () => {
   });
   return (
     <div
-      className="bg-white rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-[4rem] my-auto
-        aspect-square p-12 relative shadow-primary shadow-diagonal max-w-sm flex flex-col justify-between"
-    >
-      <h1 className="text-3xl font-bold leading-7">
+      className="bg-white rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-[4rem] my-auto max-w-80
+        p-12 relative shadow-primary shadow-diagonal flex flex-col justify-between h-80 md:h-80"
+    > 
+      <h1 className="text-2xl font-bold leading-7 md:text-3xl">
         Create a new ranking topic and watch the buzz unfold!
       </h1>
       <div className="flex w-full items-center justify-between gap-4">
-        <div className="font-bold text-2xl">Create a Ranker!</div>
+        <div className="font-bold text-base md:text-xl">Create a Ranker!</div>
         <div
           className="w-16 h-16 bg-blue-500 rounded-full aspect-square hover:cursor-pointer grid place-items-center animate-bounce"
           onClick={() => {
