@@ -54,7 +54,9 @@ export const getRanker = async (id: number): Promise<IRanker | undefined> => {
   }
 };
 
-export const getUserRankers = async (clerkId: string) => {
+export const getUserRankers = async (
+  clerkId: string,
+): Promise<{ name: string; responses: number; id: number }[]> => {
   try {
     const user = await getUserByClerkId(clerkId);
     if (!user) throw new Error("User not found");
@@ -62,7 +64,7 @@ export const getUserRankers = async (clerkId: string) => {
     const rankers = await db
       .select({
         name: Ranker.name,
-        options: Ranker.options,
+        id: Ranker.id,
         responses: count(Ranker.id),
       })
       .from(Ranker)

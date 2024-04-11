@@ -73,4 +73,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  .tab-active {
+    @apply bg-primary;
+  }
+  .tab-inactive {
+    @apply bg-transparent;
+  }
 }
