@@ -14,7 +14,7 @@ const Inbox = ({
         show ? "" : "max-lg:hidden"
       }`}
     >
-      <div className="bg-white p-6 rounded-3xl flex flex-col gap-4 w-full h-full overflow-y-auto">
+      <div className="bg-white p-6 rounded-3xl flex flex-col gap-4 w-full h-[36rem] overflow-y-auto">
         <h1 className="hidden lg:block font-bold text-center text-2xl my-2">
           INBOX
         </h1>
@@ -42,25 +42,7 @@ const Inbox = ({
           </Link>
         ))}
       </div>
-      <Link
-        href="/create-ranker"
-        className="lg:hidden flex gap-4 items-center justify-center"
-      >
-        <h1
-          className="bg-primary text-primary-foreground p-5 rounded-3xl 
-          font-semibold text-xl px-16"
-        >
-          Create a Ranker
-        </h1>
-        <div className="p-4 bg-primary rounded-full">
-          <svg
-            className="text-white"
-            height={36}
-            width={36}
-            data-feather="chevron-right"
-          ></svg>
-        </div>
-      </Link>
+      
     </div>
   );
 };
