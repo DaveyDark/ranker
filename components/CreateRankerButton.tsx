@@ -15,7 +15,7 @@ const CreateRankerButton: FC<CreateRankerProps> = () => {
   return (
     <div
       className="bg-white rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-[4rem] my-auto max-w-80
-        p-12 relative shadow-primary shadow-diagonal flex flex-col justify-between h-80 md:h-80"
+        p-12 relative shadow-primary shadow-diagonal flex flex-col justify-between h-60 md:h-80"
     > 
       <h1 className="text-2xl font-bold leading-7 md:text-3xl">
         Create a new ranking topic and watch the buzz unfold!

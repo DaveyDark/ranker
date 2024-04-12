@@ -13,7 +13,7 @@ const Home = ({
   return (
     <div
       className={`flex flex-col h-full items-center
-justify-between gap-6 ${show ? "" : "max-lg:hidden"}`}
+justify-between gap-6 ${show ? "" : "max-lg:hidden"} overflow-hidden`}
     >
       <CreateRankerButton />
       <div

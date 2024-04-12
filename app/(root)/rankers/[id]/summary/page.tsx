@@ -48,7 +48,7 @@ const Page = async ({ params }: { params: { id: number } }) => {
     <>
       <div className="bg-white m-8 p-6 rounded-3xl max-w-lg sm:mx-auto">
         <div
-          className="bg-secondary p-4 rounded-3xl text-white"
+          className="bg-secondary p-4 rounded-3xl text-white "
           id="canvasTarget"
         >
           <h1 className="font-semibold text-2xl mt-4 mb-8 text-center">

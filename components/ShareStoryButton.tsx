@@ -71,19 +71,11 @@ const ShareStoryButton = ({
       }}
     >
       <h1
-        className="bg-primary text-primary-foreground p-5 rounded-3xl 
-          font-semibold text-xl px-16"
+        className="bg-primary text-primary-foreground p-2 rounded-3xl 
+          font-semibold text-lg px-16"
       >
         Share to story
       </h1>
-      <button className="p-4 bg-primary rounded-full">
-        <svg
-          className="text-white"
-          height={36}
-          width={36}
-          data-feather="upload-cloud"
-        ></svg>
-      </button>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Inbox = ({
         show ? "" : "max-lg:hidden"
       }`}
     >
-      <div className="bg-white p-6 rounded-3xl flex flex-col gap-4 w-full h-full">
+      <div className="bg-white p-6 rounded-3xl flex flex-col gap-4 w-full h-full overflow-y-auto">
         <h1 className="hidden lg:block font-bold text-center text-2xl my-2">
           INBOX
         </h1>

@@ -80,3 +80,15 @@
     @apply bg-transparent;
   }
 }
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb{
+  background-color: #3e8af7;
+  border-radius: 20px;
+}
+
+
