@@ -17,7 +17,7 @@ justify-between gap-6 ${show ? "" : "max-lg:hidden"} sm:overflow-hidden`}
     >
       <CreateRankerButton />
       <div
-        className="bg-secondary w-screen sm:w-[28rem] flex flex-col justify-around
+        className="bg-secondary w-screen sm:w-[28rem] md:w-96 flex flex-col justify-around
           p-10 pb-4 rounded-t-[5rem] gap-4 lg:rounded-b-[5rem] lg:mb-4 lg:pb-10"
       >
         <div

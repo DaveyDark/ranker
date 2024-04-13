@@ -71,7 +71,7 @@ const ShareStoryButton = ({
       }}
     >
       <h1
-        className="bg-primary text-primary-foreground p-2 rounded-3xl 
+        className="bg-primary text-primary-foreground p-3 rounded-3xl 
           font-semibold text-lg px-16"
       >
         Share to story

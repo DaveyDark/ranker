@@ -8,17 +8,18 @@ const Inbox = ({
   rankers: { name: string; responses: number; id: number }[];
   show: boolean;
 }) => {
+  const reversedRankers = [...rankers].reverse(); //reversed the order
   return (
     <div
-      className={`w-full p-6 h-full flex flex-col gap-8 max-w-md ${
+      className={`w-full overflow-hidden lg:mr-24 lg:justify-around p-6 h-full flex flex-col gap-8 max-w-md ${
         show ? "" : "max-lg:hidden"
       }`}
     >
-      <div className="bg-white p-6 rounded-3xl flex flex-col gap-4 w-full h-[36rem] overflow-y-auto">
-        <h1 className="hidden lg:block font-bold text-center text-2xl my-2">
+      <div className="bg-white p-6 rounded-3xl flex flex-col gap-4 w-full h-[70vh] md:h-[48rem] overflow-y-auto custom-scrollbar">
+        <h1 className="hidden lg:block font-bold text-center text-2xl my-2 ">
           INBOX
         </h1>
-        {rankers.map((ranker, i) => (
+        {reversedRankers.map((ranker, i) => (
           <Link
             href={`/rankers/${ranker.id}/summary`}
             className="bg-secondary text-white p-4 rounded-3xl flex 

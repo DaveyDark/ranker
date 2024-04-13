@@ -124,7 +124,7 @@ const CreateRanker = (props: Props) => {
           onReorder={setRankerOptions}
           as="ul"
           layoutScroll
-          className="my-5 text-white bg-secondary px-8 py-4 rounded-3xl flex flex-col gap-1 max-h-[50vh] overflow-y-scroll"
+          className="my-5 text-white bg-secondary px-8 py-4 rounded-3xl flex flex-col gap-1 max-h-[50vh] overflow-y-scroll custom-scrollbar"
         >
           {rankerOptions.map((opt, i) => (
             <Reorder.Item value={opt} key={opt}>

@@ -7,7 +7,7 @@ interface Props {
 
 const IndividualResponse = ({ ranks }: Props) => {
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-4 w-full ">
       <div className="w-full">
         <h2 className="text-lg">Individual Response</h2>
       </div>
