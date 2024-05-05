@@ -81,14 +81,17 @@
   }
 }
 
-
 .custom-scrollbar::-webkit-scrollbar {
   width: 12px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb{
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #3e8af7;
   border-radius: 20px;
 }
-
-
+@media not all and (min-resolution: 0.001dpcm) {
+  .list {
+    max-height: fit-content !important;
+    overflow-y: hidden !important;
+  }
+}

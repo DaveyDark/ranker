@@ -77,11 +77,13 @@ const Page = async ({ params }: { params: { id: number } }) => {
           <h2 className="font-semibold text-xl my-4 text-center">
             Individual Responses
           </h2>
-          {individualRanking.map((ranking, index) => (
-            <Link key={index} href={`/rankings/${ranking.id}`}>
-              <IndividualList ranks={ranking.ranks} index={index} />
-            </Link>
-          ))}
+          <div className="max-h-[50vh] orverflow-y-scroll overflow-x-hidden flex flex-col gap-2">
+            {individualRanking.map((ranking, index) => (
+              <Link key={index} href={`/rankings/${ranking.id}`}>
+                <IndividualList ranks={ranking.ranks} index={index} />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>

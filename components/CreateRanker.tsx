@@ -7,6 +7,7 @@ import Image from "next/image";
 import { IRankerTemplate } from "@/database/schema/ranker_template.schema";
 import feather from "feather-icons";
 import { useRouter } from "next/navigation";
+import { useToast } from "./ui/use-toast";
 
 interface Props {
   userImg: string;
@@ -30,7 +31,58 @@ const CreateRanker = (props: Props) => {
   const router = useRouter();
   const shuffleButton = useRef<HTMLButtonElement>(null);
 
+  const toaster = useToast();
+
   function handler() {
+    if (!rankerName) {
+      toaster.toast({
+        title: "Please enter a ranker name",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerName.length > 50) {
+      toaster.toast({
+        title: "Please enter a ranker name with less than 50 characters",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerOptions.length < 2) {
+      toaster.toast({
+        title: "Please enter at least 2 options",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerOptions.length > 10) {
+      toaster.toast({
+        title: "Please enter at most 10 options",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (new Set(rankerOptions).size !== rankerOptions.length) {
+      toaster.toast({
+        title: "Please enter unique options",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerOptions.some((opt) => opt.length > 50)) {
+      toaster.toast({
+        title: "Please enter options with less than 50 characters",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerOptions.some((opt) => opt.length === 0)) {
+      toaster.toast({
+        title: "Please enter non-empty options",
+        variant: "destructive",
+      });
+      return;
+    }
     props.submitRankerCallback(rankerName, rankerOptions).then((id) => {
       if (!id) router.push("/");
       router.push(`/ranker/${id}`);
@@ -125,7 +177,7 @@ const CreateRanker = (props: Props) => {
           as="ul"
           layoutScroll
           className="my-5 text-white bg-secondary p-4 rounded-3xl flex flex-col 
-          gap-1 max-h-[50vh] overflow-y-scroll custom-scrollbar"
+          gap-1 custom-scrollbar"
         >
           {rankerOptions.map((opt, i) => (
             <Reorder.Item value={opt} key={opt} className="mx-auto">
