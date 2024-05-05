@@ -55,34 +55,6 @@ const CreateRanker = (props: Props) => {
       });
       return;
     }
-    if (rankerOptions.length > 10) {
-      toaster.toast({
-        title: "Please enter at most 10 options",
-        variant: "destructive",
-      });
-      return;
-    }
-    if (new Set(rankerOptions).size !== rankerOptions.length) {
-      toaster.toast({
-        title: "Please enter unique options",
-        variant: "destructive",
-      });
-      return;
-    }
-    if (rankerOptions.some((opt) => opt.length > 50)) {
-      toaster.toast({
-        title: "Please enter options with less than 50 characters",
-        variant: "destructive",
-      });
-      return;
-    }
-    if (rankerOptions.some((opt) => opt.length === 0)) {
-      toaster.toast({
-        title: "Please enter non-empty options",
-        variant: "destructive",
-      });
-      return;
-    }
     props.submitRankerCallback(rankerName, rankerOptions).then((id) => {
       if (!id) router.push("/");
       router.push(`/ranker/${id}`);
@@ -97,6 +69,34 @@ const CreateRanker = (props: Props) => {
   }
 
   const addRankerOption = () => {
+    if (!newOption) {
+      toaster.toast({
+        title: "Option cannot be empty",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (newOption.length > 50) {
+      toaster.toast({
+        title: "Please enter an option with less than 50 characters",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerOptions.includes(newOption)) {
+      toaster.toast({
+        title: "Option already exists",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (rankerOptions.length >= 10) {
+      toaster.toast({
+        title: "You can only have up to 10 options",
+        variant: "destructive",
+      });
+      return;
+    }
     setRankerOptions([...rankerOptions, newOption]);
     setNewOption("");
   };
