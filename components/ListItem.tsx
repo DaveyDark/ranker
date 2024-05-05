@@ -41,7 +41,9 @@ const AvgListMain: FC<AvgListMainProps> = ({
           {count}
         </span>
         <div className="min-h-[4vh] w-full custom-scrollbar flex items-center justify-center">
-          <h1 className="break-words max-w-full font-semibold px-4">{title}</h1>
+          <h1 className="break-words text-center w-full font-semibold px-4">
+            {title}
+          </h1>
         </div>
         {editable && (
           <span

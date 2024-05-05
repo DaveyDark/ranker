@@ -41,7 +41,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({ title, icon, onSubmit }) => {
   return (
     <>
       <div
-        className="flex gap-4 items-center hover:cursor-pointer"
+        className="flex gap-4 items-center justify-center hover:cursor-pointer"
         onClick={handleConfetti}
       >
         <h1

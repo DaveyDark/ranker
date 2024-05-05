@@ -45,13 +45,13 @@ const Page = async ({ params }: { params: { id: number } }) => {
   }
 
   return (
-    <>
-      <div className="bg-white m-8 p-6 rounded-3xl max-w-lg sm:mx-auto">
+    <div className="flex flex-col lg:flex-row min-h-[90vh] items-center justify-center p-4 gap-4">
+      <div className="bg-white p-4 rounded-3xl w-full max-w-lg sm:mx-auto">
         <div
           className="bg-secondary p-4 rounded-3xl text-white "
           id="canvasTarget"
         >
-          <h1 className="font-semibold text-2xl mt-4 mb-8 text-center">
+          <h1 className="font-semibold text-2xl m-4 text-center">
             {ranker.name}
           </h1>
           <AverageResponse
@@ -59,7 +59,7 @@ const Page = async ({ params }: { params: { id: number } }) => {
             ranks={averageRanking.ranks}
           />
         </div>
-        <div className="flex w-full justify-center mt-6">
+        <div className="flex w-full justify-center mt-4">
           <ShareStoryButton
             shareTitle={ranker.name}
             shareText="Rank now"
@@ -69,14 +69,11 @@ const Page = async ({ params }: { params: { id: number } }) => {
           />
         </div>
       </div>
-      <div className="bg-white m-8 p-6 rounded-3xl max-w-lg sm:mx-auto">
+      <div className="bg-white p-4 rounded-3xl w-full sm:max-w-lg sm:mx-auto">
         <div
           className="bg-secondary p-4 rounded-3xl text-white flex flex-col gap-4"
           id="canvasTarget"
         >
-          {/* <h1 className="font-semibold text-2xl mt-4 mb-8 text-center"> */}
-          {/*   {ranker.name} */}
-          {/* </h1> */}
           <h2 className="font-semibold text-xl my-4 text-center">
             Individual Responses
           </h2>
@@ -87,7 +84,7 @@ const Page = async ({ params }: { params: { id: number } }) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

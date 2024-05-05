@@ -17,12 +17,8 @@ const ShareStoryButton = ({
   shareText,
   targetId,
   listId,
-  rankerId,
 }: Props) => {
-  const toaster = useToast();
-
   const handleShare = async (blob: Blob) => {
-    const shareLink = `${window.location.origin}/ranker/${rankerId}/`;
     const filesArray = [
       new File([blob], `${shareTitle}.png`, {
         type: "image/png",
@@ -32,19 +28,17 @@ const ShareStoryButton = ({
     const shareData = {
       title: shareTitle,
       text: shareText,
-      url: shareLink,
       files: filesArray,
     };
 
     if (navigator.canShare && navigator.canShare(shareData)) {
-      navigator.clipboard.writeText(shareLink);
       await navigator.share(shareData);
     } else {
-      navigator.clipboard.writeText(shareLink);
-      toaster.toast({
-        title: "Link copied!",
-        description: "Send it to a friend!",
-      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${shareTitle}.png`;
+      a.click();
     }
   };
 

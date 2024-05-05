@@ -3,9 +3,11 @@ import React from "react";
 
 const Inbox = ({
   rankers,
+  activeRanker,
   show,
 }: {
   rankers: { name: string; responses: number; id: number }[];
+  activeRanker: number;
   show: boolean;
 }) => {
   const reversedRankers = [...rankers].reverse(); //reversed the order
@@ -22,8 +24,9 @@ const Inbox = ({
         {reversedRankers.map((ranker, i) => (
           <Link
             href={`/rankers/${ranker.id}/summary`}
-            className="bg-secondary text-white p-4 rounded-3xl flex 
-            flex-col gap-6 relative hover:scale-105 transition-transform"
+            className={`bg-secondary text-white p-4 rounded-3xl flex 
+            flex-col gap-6 relative hover:scale-105 transition-transform
+            ${activeRanker === ranker.id ? "border-4 border-primary" : ""}`}
             key={i}
           >
             <h2 className="font-semibold text-xl">{ranker.name}</h2>
@@ -43,7 +46,6 @@ const Inbox = ({
           </Link>
         ))}
       </div>
-      
     </div>
   );
 };

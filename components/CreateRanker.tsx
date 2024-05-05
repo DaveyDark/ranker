@@ -55,10 +55,10 @@ const CreateRanker = (props: Props) => {
     <>
       <div className="bg-white p-6 rounded-xl flex flex-col gap-4 m-4">
         <span className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1">
             <Image
-              width={30}
-              height={30}
+              width={36}
+              height={36}
               className="rounded-full"
               src={props.userImg}
               alt="avatar"
@@ -90,7 +90,7 @@ const CreateRanker = (props: Props) => {
         <div className="bg-secondary p-6 rounded-xl flex flex-col gap-4">
           <p className="text-white text-2xl font-semibold text-center">Topic</p>
           <input
-            className="text-xl bg-transparent font-semibold text-white border-secondary-foreground border-2 
+            className="text-md bg-transparent font-semibold text-white border-secondary-foreground border-2 
             rounded-xl p-4 focus:outline-none focus:border-primary"
             placeholder="Enter ranker topic"
             value={rankerName}
@@ -98,7 +98,7 @@ const CreateRanker = (props: Props) => {
           />
         </div>
       </div>
-      <div className="bg-white rounded-2xl p-8 shadow-diagonal shadow-primary">
+      <div className="bg-white rounded-2xl p-4 shadow-diagonal shadow-primary">
         <div className="bg-secondary p-4 rounded-2xl flex justify-between gap-2 items-center">
           <input
             className="bg-secondary-foreground text-white px-2 py-4 text-center rounded-3xl
@@ -124,10 +124,11 @@ const CreateRanker = (props: Props) => {
           onReorder={setRankerOptions}
           as="ul"
           layoutScroll
-          className="my-5 text-white bg-secondary px-8 py-4 rounded-3xl flex flex-col gap-1 max-h-[50vh] overflow-y-scroll custom-scrollbar"
+          className="my-5 text-white bg-secondary p-4 rounded-3xl flex flex-col 
+          gap-1 max-h-[50vh] overflow-y-scroll custom-scrollbar"
         >
           {rankerOptions.map((opt, i) => (
-            <Reorder.Item value={opt} key={opt}>
+            <Reorder.Item value={opt} key={opt} className="mx-auto">
               <ListItem
                 title={opt}
                 count={i + 1}

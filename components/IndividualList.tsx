@@ -20,8 +20,9 @@ const IndividualList: FC<IndividualListProps> = ({ ranks, index }) => {
                 {index + 1}
               </span>
               <div
-                className="bg-secondary-foreground text-white p-1 rounded-xl pt-4 pl-4
-                w-24 h-full text-wrap break-words line-clamp-3 overflow-hidden"
+                className="bg-secondary-foreground text-white p-1 rounded-xl
+                flex flex-col justify-center text-center 
+                w-24 min-h-24 h-full text-wrap break-words line-clamp-3 overflow-hidden"
               >
                 <h1>{rank}</h1>
               </div>

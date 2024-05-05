@@ -53,7 +53,7 @@ const LinkButton = ({
       disabled={disabled}
     >
       <svg data-feather="link" width={24} height={24} />
-      Share
+      Link
     </button>
   );
 };
