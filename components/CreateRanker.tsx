@@ -57,7 +57,7 @@ const CreateRanker = (props: Props) => {
     }
     props.submitRankerCallback(rankerName, rankerOptions).then((id) => {
       if (!id) router.push("/");
-      router.push(`/ranker/${id}`);
+      router.push(`/home`);
     });
   }
 
