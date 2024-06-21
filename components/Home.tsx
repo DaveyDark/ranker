@@ -29,7 +29,9 @@ justify-between gap-6 ${show ? "" : "max-lg:hidden"} sm:overflow-hidden`}
         >
           <p className={`font-semibold text-lg`}>Copy your link!</p>
           <LinkButton
-            link={rankerId ? `/ranker/${rankerId}` : ""}
+            link={
+              rankerId ? `${window.location.origin}/ranker/${rankerId}` : ""
+            }
             disabled={rankerId ? false : true}
           />
         </div>
@@ -39,7 +41,9 @@ justify-between gap-6 ${show ? "" : "max-lg:hidden"} sm:overflow-hidden`}
         >
           <p className={`font-semibold text-lg`}>Share your ranker!</p>
           <ShareButton
-            link={rankerId ? `/ranker/${rankerId}` : ""}
+            link={
+              rankerId ? `${window.location.origin}/ranker/${rankerId}` : ""
+            }
             rankerTitle={rankerTitle || ""}
             disabled={rankerId ? false : true}
           />
