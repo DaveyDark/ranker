@@ -37,7 +37,7 @@ const LinkButton = ({
     });
 
     setTimeout(() => {
-      navigator.clipboard.writeText(window.location.host + `${link}`);
+      navigator.clipboard.writeText(window.location.host + link);
       toaster.toast({
         title: "Link Copied!",
         description: "Share with your friends!",

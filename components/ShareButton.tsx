@@ -34,18 +34,19 @@ const ShareButton = ({
       }),
     ];
     const shareTitle = `${rankerTitle} | Rank now on Ranker`;
+    const shareUrl = window.location.host + link;
     const shareData = {
       title: shareTitle,
       text: shareTitle,
-      url: link,
+      url: shareUrl,
       files: filesArray,
     };
 
     if (navigator.canShare && navigator.canShare(shareData)) {
-      navigator.clipboard.writeText(link);
+      navigator.clipboard.writeText(shareUrl);
       await navigator.share(shareData);
     } else {
-      navigator.clipboard.writeText(link);
+      navigator.clipboard.writeText(shareUrl);
       toaster.toast({
         title: "Link copied!",
         description: "Send it to a friend!",
