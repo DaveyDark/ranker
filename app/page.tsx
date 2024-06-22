@@ -15,7 +15,7 @@ export default function Home() {
           className="text-3xl font-bold bg-white rounded-xl p-4 lg:text-5xl"
           href="/"
         >
-          RANKER.GG
+          RANKER.FUN
         </Link>
       </nav>
       <div

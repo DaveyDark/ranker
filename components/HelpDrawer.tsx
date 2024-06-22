@@ -25,30 +25,11 @@ const HelpDrawer = () => {
             <div>
               <h3 className="font-semibold">Demo Video</h3>
               <iframe
-                src="https://www.youtube.com/embed/Aouzl2BQ--c?si=gfO_fXoB9hJ_s0kz"
+                src="https://www.youtube.com/embed/ysnPGPMVpbk?si=BWh8zOAX2UoEie13"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 className="w-full max-w-lg aspect-video mx-auto"
               ></iframe>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Legal</h3>
-              <span className="flex w-full gap-4 justify-center">
-                <Link
-                  href="/tos.pdf"
-                  className="bg-primary text-white p-4 rounded-xl py-2 font-semibold"
-                  target="_blank"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  href="/privacy.pdf"
-                  className="bg-primary text-white p-4 rounded-xl py-2 font-semibold"
-                  target="_blank"
-                >
-                  Privacy Policy
-                </Link>
-              </span>
             </div>
           </div>
           <div className="flex flex-col gap-6">

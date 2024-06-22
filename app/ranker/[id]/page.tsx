@@ -40,7 +40,7 @@ const Page = async ({ params }: { params: { id: number } }) => {
           className="text-3xl font-bold text-white rounded-xl p-4 lg:text-5xl"
           href="/sign-up"
         >
-          RANKER.GG
+          RANKER.FUN
         </Link>
         <div className="bg-white rounded-2xl p-8 shadow-diagonal shadow-primary">
           <span className="flex items-center gap-2">
