@@ -117,9 +117,9 @@ const HelpDrawer = () => {
             <div className="mx-auto my-2">
               <Link
                 className="bg-primary rounded-3xl p-4 py-2 font-semibold"
-                href="https://www.patreon.com/arnav080"
+                href="https://buymeacoffee.com/ranker"
               >
-                Support us on Patreon
+                Support us on BuyMeACoffee
               </Link>
             </div>
           </div>
