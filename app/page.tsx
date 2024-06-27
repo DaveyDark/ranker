@@ -28,15 +28,26 @@ export default function Home() {
             Welcome to the ranking revolution! Sign up or log in to be a part of
             the movement!
           </p>
-          <Link href="/home">
-            <Button
-              className="bg-white text-black w-full text-2xl font-bold py-8 rounded-2xl
-              hover:bg-white hover:scale-[102%] transition-all
-              "
-            >
-              Get Started
-            </Button>
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link href="/home">
+              <Button
+                className="bg-white text-black w-full text-2xl font-bold py-8 rounded-2xl
+                hover:bg-white hover:scale-[102%] transition-all
+                "
+              >
+                Get Started
+              </Button>
+            </Link>
+            <Link href="https://www.google.com" target="_blank">
+              <Button
+                className="bg-primary text-white w-full text-2xl font-bold py-8 rounded-2xl
+                hover:bg-primary hover:scale-[102%] transition-all
+                "
+              >
+                See how it works
+              </Button>
+            </Link>
+          </div>
           <p className="text-white text-center text-lg">
             Already a member?{" "}
             <Link className="hover:underline" href="/sign-in">
