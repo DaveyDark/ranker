@@ -38,7 +38,7 @@ export default function Home() {
                 Get Started
               </Button>
             </Link>
-            <Link href="https://www.google.com" target="_blank">
+            <Link href="https://youtu.be/yJUpeUq-guo" target="_blank">
               <Button
                 className="bg-primary text-white w-full text-2xl font-bold py-8 rounded-2xl
                 hover:bg-primary hover:scale-[102%] transition-all
