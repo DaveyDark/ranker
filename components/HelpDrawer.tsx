@@ -25,7 +25,7 @@ const HelpDrawer = () => {
             <div>
               <h3 className="font-semibold">Demo Video</h3>
               <iframe
-                src="https://www.youtube.com/embed/ysnPGPMVpbk?si=BWh8zOAX2UoEie13"
+                src="https://www.youtube.com/embed/yJUpeUq-guo?si=upEZ63RrI8tVSAG9"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 className="w-full max-w-lg aspect-video mx-auto"
