@@ -22,10 +22,16 @@ const HelpDrawer = () => {
         </DrawerHeader>
         <DrawerFooter className="flex flex-col lg:flex-row w-full justify-around gap-8 items-center">
           <div className="flex flex-col gap-4">
-            <div>
+            <div className="flex flex-col gap-4">
               <h3 className="font-semibold">Demo Video</h3>
               <iframe
                 src="https://www.youtube.com/embed/yJUpeUq-guo?si=upEZ63RrI8tVSAG9"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="w-full max-w-lg aspect-video mx-auto"
+              ></iframe>
+              <iframe
+                src="https://www.youtube.com/embed/ysnPGPMVpbk?si=BWh8zOAX2UoEie13"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 className="w-full max-w-lg aspect-video mx-auto"
